@@ -35,28 +35,17 @@ p{
 
 #p1{
     
-    /* margin (direction if wanted) set to auto, keeps the item dynamically there*/
-    margin-top: -20px;
-    width: 40%;
-    overflow: hidden;
-    flex: 1 1 45%;
-    text-align: justify;
-    padding: 20px;
-    order: 1; /* Ensure text comes first on smaller screens */
-    
-    
+    max-width: 90%;
+    font-size: 1.1em;
+    margin-top: 10px;   
 }
 
 #coverimage{
 
-    border-radius: 50%;
-    border: 3px solid white;
-    padding: 7px;
-    margin-top: -80px;
-    box-shadow: 0 0 5px palevioletred;
-    max-width: 200px; /* Set a maximum width for the image */
-    height: auto; /* Maintain aspect ratio */
-    order: 2; /* Image comes second, but may wrap below text */
+     max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* optional: to keep rounded corners */
+    margin-top: 20px;
 
 }
 
