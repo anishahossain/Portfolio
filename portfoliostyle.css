@@ -54,8 +54,8 @@ p{
     padding: 7px;
     margin-top: -80px;
     box-shadow: 0 0 5px palevioletred;
-    max-width: 200px; /* Set a maximum width for the image */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 50%; /* Set a maximum width for the image */
+    height: 50%; /* Maintain aspect ratio */
     order: 2; /* Image comes second, but may wrap below text */
 
 }
