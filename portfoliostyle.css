@@ -248,10 +248,9 @@ p{
     }
 
     #coverimage {
-        max-width: 300px;
-        margin-top: -30px;
-        margin: 0;               /* Remove any margin causing spacing */
-        padding: 0;
+        max-width: 50%;
+        height: 50%;
+        margin-top: -100px;
         order: 2;
         align-self: center;      /* Force image to center itself */
         box-shadow: 0 0 10px palevioletred;
