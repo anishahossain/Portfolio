@@ -227,6 +227,47 @@ p{
     }
 }
 
+@media (min-width: 1200px) {
+    #slide1 {
+        flex-direction: column; /* Keep text above image */
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        height: 100vh;
+    }
+
+    #p1 {
+        width: 45%;
+        font-size: 22px;
+        margin: 0;
+        order: 1;
+    }
+
+    #coverimage {
+        max-width: 300px; /* Larger image for large screens */
+        margin-top: 0; /* Remove excessive margin */
+        order: 2;
+        box-shadow: 0 0 10px palevioletred;
+    }
+
+    #page1header {
+        font-size: 50px;
+        margin-top: 20px;
+    }
+
+    .titles {
+        font-size: 28px;
+        padding: 12px;
+    }
+
+    .topic {
+        width: 300px;
+        height: 300px;
+        padding: 30px;
+    }
+}
+
+
 
 #boxcontainer {
     display: flex;
