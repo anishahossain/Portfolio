@@ -250,7 +250,7 @@ p{
     #coverimage {
         max-width: 50%;
         height: 50%;
-        margin-top: -100px;
+        margin-top: -300px;
         order: 2;
         align-self: center;      /* Force image to center itself */
         box-shadow: 0 0 10px palevioletred;
