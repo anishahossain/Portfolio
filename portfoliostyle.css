@@ -170,16 +170,22 @@ p{
     }
     #slide1 {
         height: 110vh;
+        align-items: center; /* Center items horizontally */
+        gap: 20px; /* Add consistent spacing between items */
+        height: auto; /* Allow content to define height */
     }
 
     #p1{
-        margin-top: -40px;
-        width: 60%;
+        margin-top: 0; /* Reset large negative margin */
+        width: 80%;
+        order: 1;
         
     }
 
     #coverimage{
-        margin-top: -900px;
+        margin-top: 0; /* Remove -900px! */
+        margin-bottom: 20px;
+        order: 2;
     }
 
     #slide2 {
