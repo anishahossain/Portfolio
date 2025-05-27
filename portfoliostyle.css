@@ -105,9 +105,10 @@ p{
 #slide1 {
     height: 100vh;
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    padding: 20 px;
     gap: 20px;
     flex-wrap: wrap;
     width: 80%;
@@ -177,7 +178,10 @@ p{
     }
 
     #coverimage{
-        margin-top: -90px;
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px; /* optional: to keep rounded corners */
+        margin-top: 20px;
     }
 
     #slide2 {
