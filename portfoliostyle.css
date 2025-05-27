@@ -42,7 +42,7 @@ p{
 
 #coverimage{
 
-     max-width: 100%;
+    max-width: 50%;
     height: auto;
     border-radius: 10px; /* optional: to keep rounded corners */
     margin-top: 20px;
