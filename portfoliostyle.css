@@ -227,26 +227,31 @@ p{
     }
 }
 
+/* large screen media query */
 @media (min-width: 1200px) {
     #slide1 {
-        flex-direction: column; /* Keep text above image */
-        align-items: center;
-        justify-content: center;
+        display: flex;
+        flex-direction: column; /* Ensure vertical stacking */
+        align-items: center;     /* Center content horizontally */
+        justify-content: center; /* Center content vertically */
         gap: 30px;
         height: 100vh;
+        flex-wrap: nowrap;       /* Prevent side-by-side layout */
     }
 
     #p1 {
-        width: 45%;
+        width: 50%;
         font-size: 22px;
         margin: 0;
         order: 1;
+        text-align: justify;
     }
 
     #coverimage {
-        max-width: 300px; /* Larger image for large screens */
-        margin-top: 0; /* Remove excessive margin */
+        max-width: 300px;
+        margin-top: 0;
         order: 2;
+        align-self: center;      /* Force image to center itself */
         box-shadow: 0 0 10px palevioletred;
     }
 
@@ -266,6 +271,7 @@ p{
         padding: 30px;
     }
 }
+
 
 
 
