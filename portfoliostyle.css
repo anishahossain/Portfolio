@@ -239,10 +239,10 @@ p{
         flex-wrap: nowrap;       /* Prevent side-by-side layout */
     }
 
-    #p1 {
+   #p1 {
         width: 50%;
-        font-size: 22px;
-        margin: 0;
+        margin: 0;               /* Remove default margins */
+        padding: 10px 0;         /* Optional: add small vertical padding */
         order: 1;
         text-align: justify;
     }
@@ -250,6 +250,8 @@ p{
     #coverimage {
         max-width: 300px;
         margin-top: 0;
+        margin: 0;               /* Remove any margin causing spacing */
+        padding: 0;
         order: 2;
         align-self: center;      /* Force image to center itself */
         box-shadow: 0 0 10px palevioletred;
