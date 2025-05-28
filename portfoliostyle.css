@@ -37,7 +37,7 @@ p{
     
     /* margin (direction if wanted) set to auto, keeps the item dynamically there*/
     margin-top: -20px;
-    width: 40%;
+    width: 70%;
     overflow: hidden;
     flex: 1 1 45%;
     text-align: justify;
@@ -47,18 +47,18 @@ p{
     
 }
 
-#coverimage{
-
+#coverimage {
+    position: relative; /* Make position adjustable */
+    top: -40px;          /* Move image higher */
     border-radius: 50%;
     border: 3px solid white;
     padding: 7px;
-    margin-top: -80px;
     box-shadow: 0 0 5px palevioletred;
-    max-width: 200px; /* Set a maximum width for the image */
-    height: auto; /* Maintain aspect ratio */
-    order: 2; /* Image comes second, but may wrap below text */
-
+    max-width: 200px;
+    height: auto;
+    order: 2;
 }
+
 
 #frame2{
     border-radius: 60%;
@@ -240,7 +240,7 @@ p{
     }
 
    #p1 {
-        width: 50%;
+        width: 70%;
         margin: 0;               /* Remove default margins */
         padding: 10px 0;         /* Optional: add small vertical padding */
         order: 1;
@@ -250,7 +250,7 @@ p{
     #coverimage {
         max-width: 50%;
         height: 50%;
-        margin-top: -300px;
+        margin-top: -550px;
         order: 2;
         align-self: center;      /* Force image to center itself */
         box-shadow: 0 0 10px palevioletred;
