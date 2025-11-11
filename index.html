@@ -1,80 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Portfolio</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS</title>
-    <link rel="stylesheet" href="portfoliostyle.css"> <!--same style sheet can be used for multiple html files-->
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <title>Anisha | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <script src="https://kit.fontawesome.com/72506c9374.js" crossorigin="anonymous"></script>
+  <!-- Tailwind CDN (quick way) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Josefin+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/72506c9374.js" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      background:
+        radial-gradient(circle, rgba(0,0,0,0.03) 1px, transparent 0) 0 0/16px 16px,
+        #fff;
+      font-family: "Josefin Sans", system-ui, sans-serif;
+      padding-top: 60px; /* because nav is fixed */
+    }
+    nav {
+      background-color: #f29aaf;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      box-shadow: 0 2px 5px rgba(0,0,0,.1);
+    }
+
+    /* NEW: hero layout */
+    .hero-board {
+      min-height: 70vh;
+      display: grid;
+      place-items: center;
+      padding: 4.5rem 1.5rem 3rem;
+      position: relative;
+    }
+    .hero-inner {
+      width: min(1100px, 100%);
+      margin-inline: auto;
+      position: relative;
+      /* this makes absolutely positioned cards stay inside */
+      min-height: 420px;
+    }
+
+    .scrap-card {
+      background: #fff;
+      border: 2px solid #f8c9d3;
+      border-radius: 22px 22px 12px 12px;
+      box-shadow: 0 14px 30px rgba(222, 120, 146, 0.12);
+    }
+    .card-name {
+      background: #fbd1dc;
+      border: none;
+      border-radius: 14px 14px 20px 20px;
+    }
+    .photo-frame {
+      width: min(280px, 55vw);
+      aspect-ratio: 3/4;
+      border: 6px solid #f5b6c4;
+      border-radius: 999px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 12px 40px rgba(216, 124, 151, 0.25);
+      /* center the photo in the hero area */
+      position: relative;
+      z-index: 10;
+      margin: 8rem auto 0; /* ⬅️ pushes it down about 48px */
+    }
+    .photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* force the about button to be small and in the right spot */
+#about-btn {
+  position: absolute;
+  bottom: 1rem;
+  left: 4rem;
+  width: 300px !important;
+  height: 300px !important;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 999px;
+  z-index: 40;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#about-btn img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain;
+  border-radius: 999px;
+  box-shadow: 0 6px 12px rgba(216, 124, 151, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#about-btn:hover img {
+  transform: translateY(-5px) scale(1.08);
+  box-shadow: 0 12px 24px rgba(216, 124, 151, 0.35);
+}
+
+/*Welcome to my portfolio*/
+
+.welcome-card {
+  position: absolute;
+  top: 0rem;        /* move down – increase number to push further down */
+  left: 3rem;       /* move right – increase number to push further right */
+  z-index: 30;
+}
+
+.welcome-img {
+  width: 300px;     /* control size of image */
+  height: auto;
+  object-fit: contain;
+}
+
+.name-card {
+  position: absolute;
+  top: -2rem;        /* how high it sits above the photo */
+  left: 50%;          /* start in the middle horizontally */
+  transform: translateX(-50%); /* perfectly center it */
+  z-index: 30;        /* make sure it appears above the photo */
+}
+
+.name-img {
+  width: 280px;       /* adjust to make your name image fit nicely */
+  height: auto;
+  object-fit: contain;
+}
+
+/*Work exp button*/
+/* Work Experience button */
+#work-btn {
+  position: absolute;
+  top: -3rem;        /* adjust this to place it higher/lower */
+  right: 3rem;      /* adjust this to move it left/right */
+  width: 300px;     /* adjust the size */
+  height: 300px;
+  display: inline-block;
+  overflow: hidden;
+  z-index: 40;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#work-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 999px;  /* remove if you want square edges */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover motion */
+#work-btn:hover img {
+  transform: translateY(-5px) scale(1.08);
+}
+
+/* Projects button */
+#projects-btn {
+  position: absolute;
+  bottom: -2rem;      /* adjust to move up/down */
+  right: 0rem;       /* adjust to move left/right */
+  width: 350px;      /* adjust size */
+  height: 350px;
+  display: inline-block;
+  overflow: hidden;
+  z-index: 40;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#projects-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 999px;   /* remove if you want the natural PNG shape */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover effect */
+#projects-btn:hover img {
+  transform: translateY(-5px) scale(1.08);
+}
+
+
+
+
     
 
+    /* pull cards in a bit */
+    .projects-card { bottom: 3.5rem; right: 2.5rem; }
 
+    /* mobile: stack */
+    @media (max-width: 900px) {
+      .hero-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        align-items: center;
+      }
+      .hero-inner > div {
+        position: static !important;
+      }
+      .scrap-card,
+      .card-name {
+        width: min(95%, 420px);
+      }
+    }
+
+    /* nicer contact */
+    #contact {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="background.html">Background</a></li>
-            <li><a href="work.html">Experiance</a></li>
-            <li><a href="skills.html">Projects</a></li>
-        </ul>
-    </nav>
-<div class="slide">
-    <div class="pages" id="slide1">
-    <h1 id="page1header">
-        Anisha Hossain Megha
+  <!-- nav -->
+  <nav>
+    <ul class="flex justify-center gap-6 py-3 text-white">
+      <li><a href="index.html" class="hover:text-pink-50">Home</a></li>
+      <li><a href="background.html" class="hover:text-pink-50">Background</a></li>
+      <li><a href="work.html" class="hover:text-pink-50">Experiance</a></li>
+      <li><a href="skills.html" class="hover:text-pink-50">Projects</a></li>
+    </ul>
+  </nav>
 
-    </h1>
-    <p id="p1"> <!--using ids we can identify them and edit them seperatly-->
-        Hi! Welcome to my Portfolio! I am Anisha, and am glad you decided to stop by and tke a look! If you would like to know me more, please feel free to visit the "About Me" section on the next page! 
-    </p>
-    <img class="imgborder" id="coverimage" src="headshot.jpg" height="300px">
-    </div>
+  <!-- hero scrapbook -->
+  <main class="hero-board">
+    <!-- ✨ this is the new wrapper -->
+    <div class="hero-inner">
+      <!-- center photo -->
+      <div class="photo-frame">
+        <img src="pictures/headshot.jpg" alt="Photo of Anisha" />
+      </div>
 
-    <div class="pages" id="slide2">
-    <div class="header-container">
-        <h1 id="page2header">About Me</h1>
-    </div>
-        <div id="boxcontainer">
-        <a href = "background.html" title="Click to view my Background Information!" style="text-decoration: none; "><div class="topic" id="box1">
-            <h3 class="titles";>Background and Education</h3>
-        </div></a>
-        <a href = "work.html" title="Click to view my Profssional Experiences!" style="text-decoration: none; "><div class="topic" id="box2">
-            <h3 class="titles">Professional Experiance</h3>
-        </div></a>
-        <a href = "skills.html" title="Click to view my Skills and Projets!" style="text-decoration: none; "><div class="topic" id="box3">
-            <h3 class="titles">Skills and Projects</h3>
-        </div></a>
-        </div>
-    </div>
-    <div class="pages" id="slide3">
-        <h1 id="page3header">
-            Contact Me
-        </h1>
-
-    <div id="logos">
-        <div>
-        <i class="fa-brands fa-github"></i> <a href="https://github.com/anishahossain" target="_blank" class="contact">Github</a>
-    </div>
-    <div>
-        <i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/anishamegha/" target="_blank" class="contact">LinkedIn</a>
-    </div>
-    <div>
-        <i class="fa-solid fa-envelope"></i> <a href="mailto:anishahossain21@gmail.com" class="contact">Email</a>
-    </div>
-    <div>
-        <i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/_anishahossain_/" target="_blank" class="contact">Instagram</a>
-    </div>
-    </div>
-
-    </div>
+      <!-- welcome -->
+<div class="welcome-card pointer-events-auto absolute">
+  <img src="logo-home/welcome.png" alt="Welcome to my Portfolio" class="welcome-img" />
 </div>
 
+
+      <!-- name image -->
+<div class="name-card pointer-events-auto absolute">
+  <img src="logo-home/name.png" alt="My name is Anisha Hossain" class="name-img" />
+</div>
+
+
+      <!-- work experience button -->
+<a href="work.html" id="work-btn">
+  <img src="logo-home/work.png" alt="Work Experience" />
+</a>
+
+
+      <!-- About button -->
+<a href="background.html" id="about-btn">
+  <img src="logo-home/aboutme.png" alt="About Me" />
+</a>
+
+      <!-- projects button -->
+<a href="skills.html" id="projects-btn">
+  <img src="logo-home/projects.png" alt="Projects" />
+</a>
+
+    </div>
+  </main>
+
+  <!-- contact -->
+  <section id="contact" class="py-10 border-t border-pink-100">
+    <h2 class="text-center text-2xl mb-6 text-slate-700">Contact Me</h2>
+    <div id="logos" class="flex flex-wrap justify-center gap-6">
+      <div class="flex items-center gap-2">
+        <i class="fa-brands fa-github text-pink-400 text-3xl"></i>
+        <a href="https://github.com/anishahossain" target="_blank" class="text-pink-500 hover:text-pink-700">Github</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <i class="fa-brands fa-linkedin text-pink-400 text-3xl"></i>
+        <a href="https://www.linkedin.com/in/anishamegha/" target="_blank" class="text-pink-500 hover:text-pink-700">LinkedIn</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <i class="fa-solid fa-envelope text-pink-400 text-3xl"></i>
+        <a href="mailto:anishahossain21@gmail.com" class="text-pink-500 hover:text-pink-700">Email</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <i class="fa-brands fa-instagram text-pink-400 text-3xl"></i>
+        <a href="https://www.instagram.com/_anishahossain_/" target="_blank" class="text-pink-500 hover:text-pink-700">Instagram</a>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
