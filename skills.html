@@ -8,134 +8,241 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/72506c9374.js" crossorigin="anonymous"></script>
-
     <title>Background Information</title>
+    <style>
+  body {
+    background:
+      radial-gradient(circle, rgba(0,0,0,0.03) 1px, transparent 0) 0 0/16px 16px,
+      #fff;
+    /* keep your font + spacing */
+    font-family: "Josefin Sans", sans-serif;
+    padding-top: 60px; /* if your nav is fixed like on home */
+  }
+  /* Pink handwritten header style */
+  h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;           /* adjust size as you like */
+    color: #635c4c;            /* soft pink from your theme */
+    text-align: center;
+    margin-top: 2rem;
+    text-shadow: 0 2px 6px rgba(242, 154, 175, 0.4);
+    border-bottom: 2px solid rgba(242, 154, 175, 0.3);
+display: inline-block;
+padding-bottom: 0.5rem;
+
+  }
+  h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;           /* adjust size as you like */
+    color: #f29aaf;            /* soft pink from your theme */
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;           /* adjust size as you like */
+    color: #f29aaf;            /* soft pink from your theme */
+    text-align: center;
+    margin-top: 2rem;
+  }
+</style>
 </head>
 <body>
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="#slide2">About me</a></li>
             <li><a href="background.html">Background</a></li>
             <li><a href="work.html">Experiance</a></li>
             <li><a href="skills.html">Projects</a></li>
-            <li><a href="#slide3">Contact</a></li>
         </ul>
     </nav>
+
     <h1>Skills and Projects</h1>
+
+    <!-- SKILLS SECTION -->
     <div class="container">
         <div class="infobox" id="lang">
-    <h2 style="font-size: 30px;">Programming Languages & Tools</h2>
-    <p>
-        I possess a diverse range of technical skills across multiple languages, frameworks, and tools:
-    </p>
-    <div id="icons">
-        <i class="fa-brands fa-python" title="Python"></i>
-        <p style="font-family: 'Rubik'; font-size: 30px; color: pink;" title="C">C</p>
-        <p style="font-family: 'Rubik'; font-size: 30px; color: pink;" title="C++">C++</p>
-        <p style="font-family: 'Rubik'; font-size: 30px; color: pink;" title="C#">C#</p>
-        <i class="fa-brands fa-js" title="JavaScript"></i>
-        <i class="fa-brands fa-html5" title="HTML"></i>
-        <i class="fa-brands fa-css3-alt" title="CSS"></i>
-        <p style="font-family: 'Rubik'; font-size: 30px; color: pink;" title="SQL">SQL</p>
-        <p style="font-family: 'Rubik'; font-size: 30px; color: pink;" title="Tableau">Tableau</p>
-        <p style="font-family: 'Rubik'; font-size: 30px; color: pink;" title="Power BI">Power BI</p>
-        <p style="font-family: 'Rubik'; font-size: 30px; color: pink;" title="Microsoft Excel">Excel</p>
-        <p style="font-family: 'Rubik'; font-size: 30px; color: pink;" title="React">React</p>
-        <p style="font-family: 'Rubik'; font-size: 30px; color: pink;" title="Assembly">Assembly</p>
-        <i class="fa-brands fa-git-alt" title="Git"></i>
-    </div>
-</div>
+            <h2 style="font-size: 45px; color: #635c4c;">Technical Skills</h2>
+            <p>Below are the core technologies and areas I work with:</p>
+
+            <div class="skills-group">
+                <h3>Languages</h3>
+                <p>Python, C, C++, Java, JavaScript, SQL, COBOL, Power BI</p>
+            </div>
+
+            <div class="skills-group">
+                <h3>Frameworks &amp; Tools</h3>
+                <p>React.js, Node.js, Git, Docker, VS Code, Linux/Unix, Tableau</p>
+            </div>
+
+            <div class="skills-group">
+                <h3>Data &amp; Databases</h3>
+                <p>MySQL, PostgreSQL, Pandas, NumPy, scikit-learn</p>
+            </div>
+
+            <div class="skills-group">
+                <h3>Core Competencies</h3>
+                <p>Object-Oriented Programming, Data Structures &amp; Algorithms, REST APIs, Agile Development</p>
+            </div>
+        </div>
 
         <div class="infobox" id="os">
-            <h2 style="font-size: 30px;">Platforms</h2>
-            <p>
-                My expertise extends across multiple operating systems/platforms, including:
-            </p>
+            <h2 style="font-size: 45px; color: #635c4c;">Platforms / Environments</h2>
+            <p>I work across different development environments for software, data, and web.</p>
             <ul id="oslist">
-                <li>Linux</li>
+                <li>Linux / Unix</li>
                 <li>VS Code</li>
-                <li>Google Colab</li>
-                <li>Windows 7/8/10/11</li>
-                <li>PyCharm</li>
-                <li>CLion</li>
+                <li>Docker</li>
+                <li>Tableau</li>
+                <li>Git-based workflows</li>
             </ul>
         </div>
     </div>
+
+    <!-- PROJECTS / EXPERIENCE SECTION -->
     <div class="container">
         <div class="infobox" id="projects">
             <div>
-                <h2>Projects</h2>
+                <h2 style="font-size: 45px; color: #635c4c;">Project Experiences</h2>
+
+                <!-- NEW CARD 1 -->
                 <div class="project">
-                    <h2 style="font-size: 30px; clear: both; margin-top: 50px;">Gamin Trends Dashboard</h2> 
-                    <img src="Gaming Trends Overview Dashboard.png" id="card">
-                    <p id="projectdes">The Gaming Trends Dashboard is a visually dynamic dashboard in Tableau to analyze key gaming metrics using a comprehensive dataset sourced from Kaggle. The dashboard focuses on player engagement such as tracking Daily Active Users (DAU), session durations, and Top Genres providing insights into the gaming industry to evaluate player activity and engagement levels effectively.</p> 
-                    <p id="projectdes">It also includes a detailed revenue analysis, visualizing monthly revenue trends and calculating growth rates to uncover financial patterns and opportunities. Additionally, stream viewership is analyzed, comparing audience engagement across platforms such as PC, Console, Mobile, and VR to highlight user preferences and platform-specific trends.</p> <p id="projectdes">By utilizing advanced Tableau features like calculated fields, custom filters, and trend analytics, the dashboard delivers actionable insights and improves report clarity by 40%. Designed for gaming industry professionals, it empowers data-driven decision-making and demonstrates expertise in data visualization and storytelling tailored to the dynamic gaming sector.</p>
+                    <h2 style="font-size: 25px; clear: both; margin-top: 50px; font-family: 'Josefin Sans';">
+                        InCollege | COBOL, Git, Agile (Scrum), Jira
+                    </h2>
+                    <p style="font-style: italic; margin-top: -10px;">Aug 2025 – Present</p>
+                    <img src="pictures/Incollege.png" id="card" alt="InCollege Project">
+                    <p id="projectdes">
+                        Collaborated in a 6-member Agile team to build a LinkedIn-style career-networking platform in COBOL featuring login,
+                        profile creation, job search, and skill management.
+                    </p>
+                    <p id="projectdes">
+                        Directed and contributed to coding, debugging, and database handling, utilizing Git for version control and Jira for sprint tracking and progress management.
+                    </p>
+                    <p></p>
+                </div>
+
+                <!-- NEW CARD 2 -->
+                <div class="project">
+                    <h2 style="font-size: 25px; clear: both; margin-top: 50px; font-family: 'Josefin Sans';">
+                        Gaming Trends Dashboard | Tableau, Data Analysis 
+                    </h2>
+                    <p style="font-style: italic; margin-top: -10px;">Jan 2025 – May 2025</p>
+                    <img src="pictures/gamingtrendProject.png" id="card" alt="Gaming Trends Dashboard">
+                    <p id="projectdes">
+                        Created a dynamic Tableau dashboard analyzing player engagement, revenue trends, and stream viewership.
+                    </p>
+                    <p id="projectdes">
+                        Leveraged a Kaggle dataset to deliver actionable insights and improve report clarity by 56%.
+                    </p>
                     <a href="https://public.tableau.com/views/gamingdashboard_17356836698070/GamingTrendsOverviewDashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank">
                         <button id="projectbutton">Click to view Dashboard!</button>
                     </a>
+                    <p></p>
                 </div>
+
+                <!-- NEW CARD 3 -->
                 <div class="project">
-                    <h2 style="font-size: 30px; clear: both; margin-top: 50px;">Sorting Algorithm Visualizer</h2> 
-                    <img src="screen.png" id="card">
-                    <p id="projectdes">The Sorting Algorithm Visualizer is an interactive web application I developed to help users understand and visualize how different sorting algorithms work. Using HTML5, CSS, and JavaScript, I created a dynamic interface where users can see different algorithms in action.</p>
-                    <p id="projectdes">The visualizer offers user controls to adjust the number of bars, generate new sets, and choose from Bubble Sort, Selection Sort, Quick Sort, and Count Sort. Real-time animations display how each algorithm processes and sorts the data, while additional information on time and space complexity is provided for the selected algorithm. This project combines theoretical concepts with practical visualization, making it an effective tool for learning and teaching sorting algorithms.</p>
+                    <h2 style="font-size: 25px; clear: both; margin-top: 50px; font-family: 'Josefin Sans';">
+                        RISC-V Pipeline Optimization | Assembly, WebRISC-V, Computer Architecture
+                    </h2>
+                    <p style="font-style: italic; margin-top: -10px;">Jan 2025 – May 2025</p>
+                    <img src="pictures/noProPic.jpg" id="card" alt="RISC-V Pipeline Optimization">
+                    <p id="projectdes">
+                        Implemented and optimized 5-stage pipelined RISC-V CPU datapaths to analyze performance bottlenecks and hazards.
+                    </p>
+                    <p id="projectdes">
+                        Applied forwarding and instruction scheduling techniques to reduce stalls by ~20% and improve overall cycle efficiency by 25%, enhancing instruction throughput and execution speed.
+                    </p>
+                    <br>
+                    <br>
+                </div>
+
+                <!-- EXISTING PROJECTS BELOW (kept, but now after dated ones) -->
+                <div class="project">
+                    <h2 style="font-size: 25px; clear: both; margin-top: 50px; font-family: 'Josefin Sans';">Sorting Algorithm Visualizer</h2>
+                    <img src="pictures/Sorting.png" id="card" alt="Sorting Algorithm Visualizer">
+                    <p id="projectdes">
+                        An interactive web application to help users understand and visualize how different sorting algorithms work using HTML5, CSS, and JavaScript.
+                    </p>
+                    <p id="projectdes">
+                        Users can adjust number of bars, generate new sets, and choose from Bubble Sort, Selection Sort, Quick Sort, and Count Sort, with real-time animations and complexity info.
+                    </p>
                     <a href="https://sortingalgorithmvisualizer-self.vercel.app/" target="_blank">
                         <button id="projectbutton">Click to view Website!</button>
                     </a>
+                    <br>
+                    <br>
                 </div>
 
                 <div class="project">
-                    <h2 style="font-size: 30px; clear: both; margin-top: 50px;">MNIST Handwritten Digit Identifier</h2> 
-                    <img src="pt2.jpg" id="card">
-                    <p id="projectdes">This project involves building and training a neural network to classify handwritten digits from the MNIST dataset. The model is implemented using Keras, featuring multiple dense layers and dropout regularization. It predicts digit classes (0-9) based on grayscale images and achieves high accuracy by converting images to vectors and normalizing the data. The project includes visualizing model predictions to assess performance on individual test cases.
-
+                    <h2 style="font-size: 25px; clear: both; margin-top: 50px; font-family: 'Josefin Sans';">MNIST Handwritten Digit Identifier</h2>
+                    <img src="pictures/noProPic.jpg" id="card" alt="MNIST Project">
+                    <p id="projectdes">
+                        Built and trained a neural network to classify handwritten digits from the MNIST dataset using Keras, with multiple dense layers and dropout regularization.
                     </p>
                     <a href="https://colab.research.google.com/drive/1le7LgcPBkzYA-QBysHbQnrat0xnK9Ias#scrollTo=w7acJyDn7JXT" target="_blank">
                         <button id="projectbutton">Click to view Source Code!</button>
-                    </a>                    
+                    </a>
+                    <br>
+                    <p></p>
+                    <br>
+                    <br>
+                    <br>
                 </div>
-                <br>
 
                 <div class="project">
-                    <h2 style="font-size: 30px; clear: both; margin-top: 60px;">Huffman Code Generator</h2> 
-                    <img src="pt2.jpg" id="card">
-                    <p id="projectdes">I designed and implemented a lossless data compression system using Huffman coding, showcasing advanced algorithmic problem-solving and data structure expertise. The project leverages binary trees and heap-based priority queues to efficiently encode and decode data, optimizing storage by 30%.</p> 
-                    <p id="projectdes">The system includes serialization and deserialization features to ensure 100% accurate text reconstruction. This functionality supports seamless data transfer and recovery, making the solution highly practical for real-world applications requiring efficient compression.</p> 
-                    <p id="projectdes">This project highlights proficiency in C++ programming, advanced data structures, and algorithm design, delivering a robust and effective compression solution with a focus on performance and reliability.</p>
+                    <h2 style="font-size: 25px; clear: both; margin-top: 50px; font-family: 'Josefin Sans';">Huffman Code Generator</h2>
+                    <img src="pictures/noProPic.jpg" id="card" alt="Huffman Code Generator">
+                    <p id="projectdes">
+                        Designed and implemented a lossless data compression system using Huffman coding, leveraging binary trees and heap-based priority queues to efficiently encode and decode data.
+                    </p>
                     <a href="https://github.com/anishahossain/CPP_projects/tree/main/Huffman%20Code%20Generator" target="_blank">
                         <button id="projectbutton">Click to view Source Code!</button>
                     </a>
-                    
+                    <br>
+                    <br>
+                    <p></p>
+                    <br>
+                    <br>
+                    <br>
                 </div>
 
                 <div class="project">
-                    <h2 style="font-size: 30px; clear: both; margin-top: 60px;">File Editor</h2> 
-                    <img src="pt2.jpg" id="card">
-                    <p id="projectdes">In this project, I developed a Database Tracker and Editor using C, focusing on Object-Oriented Programming principles and efficient Data Structures. 
-                        This program empowers users to interact with their data seamlessly by performing a variety of functions tailored to their needs. From editing existing records to generating enhanced user files, every action is designed to enhance data management efficiency and user experience.</p>
+                    <h2 style="font-size: 25px; clear: both; margin-top: 50px; font-family: 'Josefin Sans';">File Editor</h2>
+                    <img src="pictures/noProPic.jpg" id="card" alt="File Editor Project">
+                    <p id="projectdes">
+                        Developed a Database Tracker and Editor in C to allow users to edit existing records and generate enhanced user files, focusing on data management and user experience.
+                    </p>
                     <a href="https://github.com/anishahossain/C_Projects/blob/main/File_editor_sourcefile.c" target="_blank">
                         <button id="projectbutton">Click to view Source Code!</button>
                     </a>
-                    
+                    <br>
+                    <p></p>
+                    <br>
                 </div>
+
             </div>
         </div>
     </div>
+
     <div class="infobox2" id="projects">
         <div class="project">
-            <h2 style="font-size: 30px;">Lunar - Entrepreneurship Project</h2>
-            <img src="lunar.png" id="card">
-            <p id="projectdes">Lunar is a business project hat I created as a social media-based online platform for merchandising self-made art, combining my passion for drawing and painting with a love for connecting with art enthusiasts. I designed a fully responsive UI/UX for the brand to showcase a combination of my passion for both painting an computer science. 
-                Specializing in traditional portraits and acrylic paintings, I have made over 20 successful sales, bringing my artistic vision to life and sharing it with others.</p>
+            <h2 style="font-size: 35px;">Lunar - Entrepreneurship Project</h2>
+            <img src="pictures/lunar.png" id="card" alt="Lunar Project">
+            <p id="projectdes">
+                Lunar is a social media-based online platform for merchandising self-made art, combining painting and CS.
+                Designed a responsive UI/UX and made 20+ successful sales of traditional portraits and acrylic paintings.
+            </p>
             <a href="https://hossainmaya212vwou.wixsite.com/lunar" target="_blank">
                 <button id="projectbutton">Click to view Website!</button>
             </a>
         </div>
-        </div>
-    
+    </div>
+
 </body>
 </html>

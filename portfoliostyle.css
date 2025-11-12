@@ -116,15 +116,6 @@ p{
 }
 
 
-h3{
-   text-align: center;
-   color: #f5789b;
-   font-family: "Josefin Sans" ;
-   text-shadow: 0px 0px 5px palevioletred;
-   font-size: 30px;
-   
-}
-
 /*Background, work experiance*/
 .infobox{
     border: 2px palevioletred;
@@ -182,9 +173,9 @@ h3{
 }
 
 #oslist{
-    font-family:'Rubik';
-    color: pink;
-    font-size: 15px;
+    font-family:'Josefin Sans';
+    color: #f29aaf;
+    font-size: 22px;
 }
 
 #card {
@@ -401,6 +392,17 @@ body {
   width: min(1100px, 100%);
   margin-inline: auto;
   position: relative;
+}
+
+.project {
+  border-bottom: 2px solid rgba(242, 154, 175, 0.3);
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.project:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 
