@@ -188,31 +188,51 @@
 #projects-btn:hover img {
   transform: translateY(-5px) scale(1.08);
 }
-
-
-
-
-    
+  
 
     /* pull cards in a bit */
     .projects-card { bottom: 3.5rem; right: 2.5rem; }
 
-    /* mobile: stack */
-    @media (max-width: 900px) {
-      .hero-inner {
-        display: flex;
-        flex-direction: column;
-        gap: 1.25rem;
-        align-items: center;
-      }
-      .hero-inner > div {
-        position: static !important;
-      }
-      .scrap-card,
-      .card-name {
-        width: min(95%, 420px);
-      }
-    }
+   /* mobile: stack layout for small screens */
+@media (max-width: 900px) {
+  .hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem; /* space between each section */
+    position: static;
+    width: 100%;
+  }
+
+  /* ensure all children flow normally */
+  .hero-inner > div {
+    position: static !important;
+    transform: none !important;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* make cards/buttons not too wide */
+  .scrap-card,
+  .card-name {
+    width: min(95%, 420px);
+    margin: 0 auto;
+  }
+
+  /* ensure correct vertical stacking order:
+     welcome → photo → buttons */
+  .welcome-section {
+    order: 1;
+  }
+  .center-photo {
+    order: 2;
+  }
+  .button-group {
+    order: 3;
+  }
+}
+
 
     /* nicer contact */
     #contact {
