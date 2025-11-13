@@ -194,42 +194,75 @@
     .projects-card { bottom: 3.5rem; right: 2.5rem; }
 
    /* mobile: stack layout for small screens */
+/* mobile: stack layout for small screens */
 @media (max-width: 900px) {
   .hero-inner {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 3rem; /* space between each section */
+    justify-content: flex-start;
+    gap: 2rem;
     position: static;
     width: 100%;
+    min-height: auto;
   }
 
-  /* ensure all children flow normally */
-  .hero-inner > div {
+  /* reset ALL children (divs + links) so they stop being absolute */
+  .hero-inner > * {
     position: static !important;
     transform: none !important;
-    width: 100%;
+    margin: 0 auto;
     text-align: center;
   }
 
-  /* make cards/buttons not too wide */
-  .scrap-card,
-  .card-name {
-    width: min(95%, 420px);
-    margin: 0 auto;
+  /* remove big top margin on photo */
+  .photo-frame {
+    margin-top: 0;
+    order: 3; /* after welcome + name */
   }
 
-  /* ensure correct vertical stacking order:
-     welcome → photo → buttons */
-  .welcome-section {
+  /* stack order:
+     1. welcome
+     2. name
+     3. photo
+     4. about
+     5. work
+     6. projects
+  */
+  .welcome-card {
     order: 1;
   }
-  .center-photo {
+
+  .name-card {
     order: 2;
   }
-  .button-group {
-    order: 3;
+
+  #about-btn {
+    order: 4;
+  }
+
+  #work-btn {
+    order: 5;
+  }
+
+  #projects-btn {
+    order: 6;
+  }
+
+  /* make round buttons fit nicely on small screens */
+  #about-btn,
+  #work-btn,
+  #projects-btn {
+    width: min(260px, 70vw);
+    height: auto;
+  }
+
+  #about-btn img,
+  #work-btn img,
+  #projects-btn img {
+    width: 100%;
+    height: auto;
+    border-radius: 999px;
   }
 }
 
