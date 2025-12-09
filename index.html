@@ -18,7 +18,8 @@
         radial-gradient(circle, rgba(0,0,0,0.03) 1px, transparent 0) 0 0/16px 16px,
         #fff;
       font-family: "Josefin Sans", system-ui, sans-serif;
-      padding-top: 60px; /* because nav is fixed */
+      border-top: 12px solid #f29aaf;
+      padding-top: 0;
     }
     nav {
       background-color: #f29aaf;
@@ -28,6 +29,50 @@
       right: 0;
       z-index: 50;
       box-shadow: 0 2px 5px rgba(0,0,0,.1);
+    }
+
+    /* top pink banner with left PDF link and right text */
+    .top-header {
+      background: #f29aaf;
+      color: #fff;
+      padding-bottom: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,.12);
+      border-bottom: 4px solid #f7c3d0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      letter-spacing: 0.04em;
+      font-size: clamp(16px, 1.4vw + 12px, 22px);
+      flex-wrap: wrap;
+    }
+    .top-link {
+      color: #fff;
+      
+      text-decoration: none;
+      border: 2px solid #fff;
+      border-radius: 999px;
+      padding: 7px 16px;
+      transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+      font-size: 15px;
+      letter-spacing: 0.02em;
+    }
+    .top-link:hover {
+      background: #fff;
+      color: #f29aaf;
+      transform: translateY(-2px);
+    }
+    .top-text-group {
+      
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 18px;
+    }
+    .top-text-group span {
+      white-space: nowrap;
     }
 
     /* NEW: hero layout */
@@ -281,15 +326,13 @@
   </style>
 </head>
 <body>
-  <!-- nav -->
-  <nav>
-    <ul class="flex justify-center gap-6 py-3 text-white">
-      <li><a href="index.html" class="hover:text-pink-50">Home</a></li>
-      <li><a href="background.html" class="hover:text-pink-50">About Me</a></li>
-      <li><a href="work.html" class="hover:text-pink-50">Experience</a></li>
-      <li><a href="skills.html" class="hover:text-pink-50">Projects</a></li>
-    </ul>
-  </nav>
+  <header class="top-header">
+    <div class="top-text-group">
+      <span>Click around and have fun!</span>
+    </div>
+    <a class="top-link" href="Resume_AnishaHossain.pdf" target="_blank" rel="noopener">View Resume</a>
+  </header>
+  
 
   <!-- hero scrapbook -->
   <main class="hero-board">
